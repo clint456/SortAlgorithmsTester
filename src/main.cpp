@@ -1,13 +1,12 @@
+// main.cpp
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <chrono>
 #include <cassert>
 #include <random>
-#include "Sorter.h"
-#include "BubbleSort.h"
-#include "QuickSort.h"
-// 测试框架
+#include "BubbleSort.h"  // 包含 BubbleSort.h
+#include "QuickSort.h"   // 包含 QuickSort.h
+
 class SortTester {
 public:
     SortTester(Sorter* sorter) : sorter_(sorter) {}
@@ -32,27 +31,21 @@ public:
 
     void testSorting() {
         std::vector<int> arr = generateRandomArray(10);
-
         std::cout << "Original array: ";
         printArray(arr);
 
         std::vector<int> arrCopy = arr;
-
         sorter_->sort(arr);
-
         std::sort(arrCopy.begin(), arrCopy.end());
         assert(arr == arrCopy && "Sorting failed!");
-
         std::cout << sorter_->name() << " passed the test!" << std::endl;
     }
 
     void testPerformance() {
         std::vector<int> arr = generateRandomArray(100000);
-
         auto start = std::chrono::high_resolution_clock::now();
         sorter_->sort(arr);
         auto end = std::chrono::high_resolution_clock::now();
-
         std::chrono::duration<double> duration = end - start;
         std::cout << sorter_->name() << " sorting time: " << duration.count() << " seconds" << std::endl;
     }
