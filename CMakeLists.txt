@@ -9,4 +9,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 include_directories(include)
 
 # 添加源文件
-add_executable(SortAlgorithmsTester src/main.cpp src/BubbleSort.cpp src/QuickSort.cpp)
+add_executable(SortAlgorithmsTester 
+                src/main.cpp 
+                src/BubbleSort.cpp 
+                src/QuickSort.cpp 
+                src/HeapSort.cpp
+                src/InsertionSort.cpp
+                src/ShellSort.cpp 
+                src/SelectionSort.cpp
+                src/MergeSort.cpp
+                src/RadixSort.cpp 
+                src/CountingSort.cpp 
+                src/BucketSort.cpp)

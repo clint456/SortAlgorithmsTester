@@ -6,8 +6,16 @@
 #include <cassert>
 #include <random>
 #include <algorithm>
-#include "BubbleSort.h" // 包含 BubbleSort.h
-#include "QuickSort.h"  // 包含 QuickSort.h
+#include "BubbleSort.h"
+#include "QuickSort.h"
+#include "HeapSort.h"
+#include "InsertionSort.h"
+#include "ShellSort.h"
+#include "SelectionSort.h"
+#include "MergeSort.h"
+#include "RadixSort.h"
+#include "CountingSort.h"
+#include "BucketSort.h"  
 
 class SortTester
 {
@@ -49,8 +57,8 @@ public:
         std::sort(arrCopy.begin(), arrCopy.end());
 
         // 比较排序后的结果，确保两者相等
-        assert(arr == arrCopy && " 排序失败!");
-        std::cout << sorter_->name() << " 通过测试!" << std::endl;
+        assert(arr == arrCopy && " 排序失败!\n");
+        std::cout << sorter_->name() << " 通过测试!\n" << std::endl;
     }
 
     void testPerformance()
@@ -69,21 +77,68 @@ private:
 
 int main()
 {
-    BubbleSort bubbleSort;
+   BubbleSort bubbleSort;
     QuickSort quickSort;
+    HeapSort heapSort;
+    InsertionSort insertionSort;
+    ShellSort shellSort;
+    SelectionSort selectionSort;
+    MergeSort mergeSort;
+    RadixSort radixSort;
+    CountingSort countingSort;
+    BucketSort bucketSort;  // 实例化桶排序
 
     SortTester bubbleTester(&bubbleSort);
     SortTester quickTester(&quickSort);
+    SortTester heapTester(&heapSort);
+    SortTester insertionTester(&insertionSort);
+    SortTester shellTester(&shellSort);
+    SortTester selectionTester(&selectionSort);
+    SortTester mergeTester(&mergeSort);
+    SortTester radixTester(&radixSort);
+    SortTester countingTester(&countingSort);
+    SortTester bucketTester(&bucketSort);  // 增加桶排序测试
 
-    std::cout << "Bubble Sort测试:" << std::endl;
+    std::cout << "Testing Bubble Sort:" << std::endl;
     bubbleTester.testSorting();
 
-    std::cout << "Quick Sort测试:" << std::endl;
+    std::cout << "Testing Quick Sort:" << std::endl;
     quickTester.testSorting();
 
-    std::cout << "\n性能测试:" << std::endl;
-    //bubbleTester.testPerformance();
-    quickTester.testPerformance();
+    std::cout << "Testing Heap Sort:" << std::endl;
+    heapTester.testSorting();
 
+    std::cout << "Testing Insertion Sort:" << std::endl;
+    insertionTester.testSorting();
+
+    std::cout << "Testing Shell Sort:" << std::endl;
+    shellTester.testSorting();
+
+    std::cout << "Testing Selection Sort:" << std::endl;
+    selectionTester.testSorting();
+
+    std::cout << "Testing Merge Sort:" << std::endl;
+    mergeTester.testSorting();
+
+    std::cout << "Testing Radix Sort:" << std::endl;
+    radixTester.testSorting();
+
+    std::cout << "Testing Counting Sort:" << std::endl;
+    countingTester.testSorting();
+
+    std::cout << "Testing Bucket Sort:" << std::endl;
+    bucketTester.testSorting();
+
+    std::cout << "\nTesting Performance:" << std::endl;
+    bubbleTester.testPerformance();
+    quickTester.testPerformance();
+    heapTester.testPerformance();
+    insertionTester.testPerformance();
+    shellTester.testPerformance();
+    selectionTester.testPerformance();
+    mergeTester.testPerformance();
+    radixTester.testPerformance();
+    countingTester.testPerformance();
+    bucketTester.testPerformance();
     return 0;
 }
