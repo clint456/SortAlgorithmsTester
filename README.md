@@ -1,6 +1,6 @@
 # Sorting Algorithms Framework
-[chinese](./README_CN.md)
-[english](./README.md)
+[中文](./README_CN.md)<br>
+
 This repository contains a collection of sorting algorithms implemented in C++. It provides a framework for testing and comparing various sorting algorithms on both small arrays for correctness and large arrays for performance. The implemented algorithms include:
 
 - Bubble Sort
