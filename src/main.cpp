@@ -58,7 +58,8 @@ public:
 
         // 使用 std::sort 对副本进行排序
         std::sort(arrCopy.begin(), arrCopy.end());
-
+        std::cout << "排序结果应为: ";
+        printArray(arrCopy);
         // 比较排序后的结果，确保两者相等
         assert(arr == arrCopy && " 排序失败!\n");
         std::cout << sorter_->name() << " 通过测试!\n" << std::endl;

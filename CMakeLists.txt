@@ -4,6 +4,7 @@ project(SortAlgorithmsTester)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_BUILD_TYPE Debug)
 
 # 包含头文件目录
 include_directories(include)
@@ -21,3 +22,6 @@ add_executable(SortAlgorithmsTester
                 # src/RadixSort.cpp 
                 # src/CountingSort.cpp 
                 # src/BucketSort.cpp)
+
+               
+

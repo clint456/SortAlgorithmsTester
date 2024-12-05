@@ -12,7 +12,7 @@ public:
     virtual std::string name() const = 0;
     virtual ~Sorter() = default;
 
-    void swap(int a,int b){
+    void swap(int &a,int &b){
     int temp;
     temp = a;
     a = b;
