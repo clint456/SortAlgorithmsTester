@@ -60,7 +60,14 @@
 			"stdexcept": "cpp",
 			"streambuf": "cpp",
 			"typeinfo": "cpp",
-			"variant": "cpp"
+			"variant": "cpp",
+			"stop_token": "cpp",
+			"thread": "cpp",
+			"condition_variable": "cpp",
+			"list": "cpp",
+			"map": "cpp",
+			"mutex": "cpp",
+			"semaphore": "cpp"
 		}
 	}
 }

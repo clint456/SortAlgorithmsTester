@@ -53,6 +53,9 @@ public:
         std::vector<int> arrCopy = arr; // 创建副本
         sorter_->sort(arr);             // 使用自定义排序算法对原始数组排序
 
+        std::cout << "排序后的数组为: ";
+        printArray(arr);
+
         // 使用 std::sort 对副本进行排序
         std::sort(arrCopy.begin(), arrCopy.end());
 
@@ -78,67 +81,67 @@ private:
 int main()
 {
    BubbleSort bubbleSort;
-    QuickSort quickSort;
-    HeapSort heapSort;
-    InsertionSort insertionSort;
-    ShellSort shellSort;
-    SelectionSort selectionSort;
-    MergeSort mergeSort;
-    RadixSort radixSort;
-    CountingSort countingSort;
-    BucketSort bucketSort;  // 实例化桶排序
+    // QuickSort quickSort;
+    // HeapSort heapSort;
+    // InsertionSort insertionSort;
+    // ShellSort shellSort;
+    // SelectionSort selectionSort;
+    // MergeSort mergeSort;
+    // RadixSort radixSort;
+    // CountingSort countingSort;
+    // BucketSort bucketSort;  // 实例化桶排序
 
     SortTester bubbleTester(&bubbleSort);
-    SortTester quickTester(&quickSort);
-    SortTester heapTester(&heapSort);
-    SortTester insertionTester(&insertionSort);
-    SortTester shellTester(&shellSort);
-    SortTester selectionTester(&selectionSort);
-    SortTester mergeTester(&mergeSort);
-    SortTester radixTester(&radixSort);
-    SortTester countingTester(&countingSort);
-    SortTester bucketTester(&bucketSort);  // 增加桶排序测试
+    // SortTester quickTester(&quickSort);
+    // SortTester heapTester(&heapSort);
+    // SortTester insertionTester(&insertionSort);
+    // SortTester shellTester(&shellSort);
+    // SortTester selectionTester(&selectionSort);
+    // SortTester mergeTester(&mergeSort);
+    // SortTester radixTester(&radixSort);
+    // SortTester countingTester(&countingSort);
+    // SortTester bucketTester(&bucketSort);  // 增加桶排序测试
 
     std::cout << "Testing Bubble Sort:" << std::endl;
     bubbleTester.testSorting();
 
-    std::cout << "Testing Quick Sort:" << std::endl;
-    quickTester.testSorting();
+    // std::cout << "Testing Quick Sort:" << std::endl;
+    // quickTester.testSorting();
 
-    std::cout << "Testing Heap Sort:" << std::endl;
-    heapTester.testSorting();
+    // std::cout << "Testing Heap Sort:" << std::endl;
+    // heapTester.testSorting();
 
-    std::cout << "Testing Insertion Sort:" << std::endl;
-    insertionTester.testSorting();
+    // std::cout << "Testing Insertion Sort:" << std::endl;
+    // insertionTester.testSorting();
 
-    std::cout << "Testing Shell Sort:" << std::endl;
-    shellTester.testSorting();
+    // std::cout << "Testing Shell Sort:" << std::endl;
+    // shellTester.testSorting();
 
-    std::cout << "Testing Selection Sort:" << std::endl;
-    selectionTester.testSorting();
+    // std::cout << "Testing Selection Sort:" << std::endl;
+    // selectionTester.testSorting();
 
-    std::cout << "Testing Merge Sort:" << std::endl;
-    mergeTester.testSorting();
+    // std::cout << "Testing Merge Sort:" << std::endl;
+    // mergeTester.testSorting();
 
-    std::cout << "Testing Radix Sort:" << std::endl;
-    radixTester.testSorting();
+    // std::cout << "Testing Radix Sort:" << std::endl;
+    // radixTester.testSorting();
 
-    std::cout << "Testing Counting Sort:" << std::endl;
-    countingTester.testSorting();
+    // std::cout << "Testing Counting Sort:" << std::endl;
+    // countingTester.testSorting();
 
-    std::cout << "Testing Bucket Sort:" << std::endl;
-    bucketTester.testSorting();
+    // std::cout << "Testing Bucket Sort:" << std::endl;
+    // bucketTester.testSorting();
 
-    std::cout << "\nTesting Performance:" << std::endl;
+    // std::cout << "\nTesting Performance:" << std::endl;
     bubbleTester.testPerformance();
-    quickTester.testPerformance();
-    heapTester.testPerformance();
-    insertionTester.testPerformance();
-    shellTester.testPerformance();
-    selectionTester.testPerformance();
-    mergeTester.testPerformance();
-    radixTester.testPerformance();
-    countingTester.testPerformance();
-    bucketTester.testPerformance();
+    // quickTester.testPerformance();
+    // heapTester.testPerformance();
+    // insertionTester.testPerformance();
+    // shellTester.testPerformance();
+    // selectionTester.testPerformance();
+    // mergeTester.testPerformance();
+    // radixTester.testPerformance();
+    // countingTester.testPerformance();
+    // bucketTester.testPerformance();
     return 0;
 }
