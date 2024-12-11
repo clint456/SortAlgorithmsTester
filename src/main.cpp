@@ -81,9 +81,9 @@ private:
 
 int main()
 {
-   BubbleSort bubbleSort;
+    // BubbleSort bubbleSort;
     // QuickSort quickSort;
-    // HeapSort heapSort;
+    HeapSort heapSort;
     // InsertionSort insertionSort;
     // ShellSort shellSort;
     // SelectionSort selectionSort;
@@ -92,9 +92,9 @@ int main()
     // CountingSort countingSort;
     // BucketSort bucketSort;  // 实例化桶排序
 
-    SortTester bubbleTester(&bubbleSort);
+    // SortTester bubbleTester(&bubbleSort);
     // SortTester quickTester(&quickSort);
-    // SortTester heapTester(&heapSort);
+    SortTester heapTester(&heapSort);
     // SortTester insertionTester(&insertionSort);
     // SortTester shellTester(&shellSort);
     // SortTester selectionTester(&selectionSort);
@@ -103,14 +103,14 @@ int main()
     // SortTester countingTester(&countingSort);
     // SortTester bucketTester(&bucketSort);  // 增加桶排序测试
 
-    std::cout << "Testing Bubble Sort:" << std::endl;
-    bubbleTester.testSorting();
+    // std::cout << "Testing Bubble Sort:" << std::endl;
+    // bubbleTester.testSorting();
 
     // std::cout << "Testing Quick Sort:" << std::endl;
     // quickTester.testSorting();
 
-    // std::cout << "Testing Heap Sort:" << std::endl;
-    // heapTester.testSorting();
+    std::cout << "Testing Heap Sort:" << std::endl;
+    heapTester.testSorting();
 
     // std::cout << "Testing Insertion Sort:" << std::endl;
     // insertionTester.testSorting();
@@ -134,9 +134,9 @@ int main()
     // bucketTester.testSorting();
 
     // std::cout << "\nTesting Performance:" << std::endl;
-    bubbleTester.testPerformance();
+    // bubbleTester.testPerformance();
     // quickTester.testPerformance();
-    // heapTester.testPerformance();
+    heapTester.testPerformance();
     // insertionTester.testPerformance();
     // shellTester.testPerformance();
     // selectionTester.testPerformance();
